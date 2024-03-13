@@ -1,0 +1,42 @@
+$primary-color: #ef9273;
+
+.Header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  // background-color: #eddcd9;
+}
+
+.productTitle {
+  flex: 1;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.cartButtonWraper {
+  position: relative;
+
+  .cartButton {
+    color: $primary-color;
+    cursor: pointer;
+    font-size: 3rem;
+    align-self: center;
+
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+  .cartItemCount {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: #f2ebe9;
+    width: 20px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #0d0d0d;
+    text-align: center;
+  }
+}

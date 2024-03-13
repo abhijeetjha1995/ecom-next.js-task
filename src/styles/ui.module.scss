@@ -1,0 +1,109 @@
+$primary-color: #ef9273;
+
+.filter {
+
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.filterDropdown,
+.priceInput {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.priceRange {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  input[type="number"] {
+    margin-right: 1rem;
+  }
+
+  :last-child {
+    margin-left: 0.5rem;
+  }
+}
+
+.slidecontainer {
+  margin-bottom: 1rem;
+}
+
+
+.uiInput {
+  width: 4rem; 
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+
+  &:focus {
+    outline: none; 
+    border-color: #4caf50; 
+  }
+
+  input[type="number"] {
+    @extend .uiInput;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filter {
+
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .priceRange {
+    flex-direction: column; 
+    display: block;
+    input[type="number"] {
+      margin-bottom: 0.5rem;
+    }
+  }
+  @media screen and (max-width: 370px) {
+    .filter {
+      flex-grow: 1; 
+    }
+
+  }
+}
+
+.button {
+  background-color: $primary-color;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+
+.productStarRating {
+  display: flex;
+  align-items: center;
+
+  .filledStar {
+    color: #ffc107;
+  }
+
+  .emptyStar {
+    color: #959292;
+  }
+
+  .rating {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+}
